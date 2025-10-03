@@ -1,4 +1,5 @@
-from linalg.vector import Vector, DimensionMismatchError
+from linalg.vector import Vector
+from linalg.dimension_mismatch_error import DimensionMismatchError
 
 from typing import Final
 import pytest
@@ -63,5 +64,5 @@ def test_vector_scale_ten():
 def test_vector_scale_negative_scaler():
     s = -1
     vec = Vector([2, 3, 4])
-    expected: Final[Vector] = Vector([-2, -3, -5])
+    expected: Final[Vector] = Vector([-2, -3, -4])
     assert expected == vec.scale(s)

@@ -1,10 +1,5 @@
 from dataclasses import dataclass
-
-
-class DimensionMismatchError(Exception):
-    """Raised when vectors do not have the same dimension (length)."""
-
-    pass
+from .dimension_mismatch_error import DimensionMismatchError
 
 
 @dataclass
@@ -35,6 +30,12 @@ class Vector:
         for item in self.values:
             result.append(scaler * item)
         return Vector(result)
+
+    def __iter__(self):
+        return iter(self.values)
+
+    def __len__(self):
+        return len(self.values)
 
 
 #    @staticmethod
