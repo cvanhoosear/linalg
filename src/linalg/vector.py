@@ -37,15 +37,5 @@ class Vector:
     def __len__(self):
         return len(self.values)
 
-
-#    @staticmethod
-#    def is_independent(vectors: list[Vector]) -> bool:
-#        """
-#        Linear independance is defined as a set of .vavectors that are
-#        not a linear combinaition of other.
-#        """
-#        pass
-#
-#    @staticmethod
-#    def gausin_elmination(matrix: list[Vector]) -> list[Vector]:
-#        pass
+    def __getitem(self, i):
+        return self.values[i]
